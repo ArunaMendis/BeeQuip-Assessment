@@ -1,14 +1,6 @@
-# Test automation engineer test
-
-We'll be using this test to assess your skill level as a test automation engineer. This test is designed to test your skills which are needed in the day-to-day job of a test automation engineer at [Beequip](https://beequip.com). 
-We expect you to spend a maximum of four hours on this test. You can use Google and Stack Overflow, just like you would normally do. Don't worry when you run out of time though, we would still like to see what you came up with!
-
-## Objectives and requirements
-
-Use the Playwright set-up to implement and end-to-end test to the user journey of visiting Beequip's website, finding pre-owned equipment on the marketplace and requesting a quote using the lease calculator.
-This means that we expect you to come up with assertions for the following interactions:
-
-  - Visit the **test** website of Beequip (https://staging.beequip.com/)
+## Tester Remarks
+E2E test covered upto;
+ - Visit the **test** website of Beequip (https://staging.beequip.com/)
     - This website is protected by Basic authentication, in the `tests/example.spec.js` credentials are provided to run the Playwright tests
     - You can use the same credentials to navigate the page on your own browser
   - Navigate from the website to the Marketplace
@@ -17,6 +9,12 @@ This means that we expect you to come up with assertions for the following inter
     - With a _kilometerstand_ less than 300.000 kilometers
     - With six _cilinders_
   - Navigate to the ad of the found equipment
+  - It will validate the monthly rate for the lease amount
+
+    Unfortunately, I couldnt extend the automation to rest of the steps with staging URL, the workflow is different than production url, and I'm directing to different URL.
+<img width="2862" height="1504" alt="Screenshot 2025-07-26 at 14 55 46" src="https://github.com/user-attachments/assets/937d7d1a-f7ec-413e-8dac-4234b5bacd7a" />
+
+Therefore, not convered section;
   - Calculate a monthly price using the lease calculator
     - Search for Beequip as the company (_KVK-nummer:_ 63204258)
     - Use the `@example.com` or `@mailinator.com` domein
@@ -24,34 +22,26 @@ This means that we expect you to come up with assertions for the following inter
   - Increase the _aanbetaling_ and _looptijd_ to reduce the monthly price
   - Request a quote
   - **Stretch goal:** Add assertions for the email contents
-  - **Stretch goal:** Add data-driving tests for the _aanbetaling_ and _looptijd_ components
+  - **Stretch goal:** Add data-driving tests for the _aanbetaling_ and _looptijd_ 
 
-Requirements that you need to take into account:
+## Execute the Project with below commands;
 
-  - Playwright should be used to implement the tests
-  - Typescript is not mandatory
-  - At least two browsers should be supported
-  - A report with the test findings should be produced
+Folder Structure:
+1. GitHub Actions
+2. Fixture (only contains login.json) 
+3. Page-Objects - Contains all page objects
+4. Tests - Contains all test cases. 
 
-## Getting started
+Getting Started
 
-Make sure that you can run Node 18.x and Yarn 1.22.x on your laptop and get started using:
+Make sure you have NodeJS installed.
+* git clone https://github.com/ArunaMendis/BeeQuip-Assessment.git
+* cd Aruna - Beequip -Assessment
+* ‘yarn install’ or ‘yarn playwright install’
+* To run the project with - Playwright Runner - yarn playwright test —ui
+* To directly run and generate report
+    * yarn playwright test
+    * yarn playwright show-report
 
-```
-# Install the dependencies
-yarn install
-
-# Run the tests
-yarn playwright test
-yarn playwright test --ui
-```
-
-## Deliverables
-
-Send us a link to the hosted repository with your code. It can be hosted anywhere e.g. Github, Gitlab as long as you provide us access. 
-Include all the code and instructions that are necessary to run the end-to-end tests and to verify the requirements.
-Write a small paragraph (3-6 sentences) on your approach and design decisions.
-
-## Questions
-
-In case you have questions about the test you can contact Jan van der Pas (jan.vanderpas@beequip.nl) or Marthyn Olthof (marthyn.olthof@beequip.nl).
+Sample execution Report
+<img width="2094" height="552" alt="Screenshot 2025-07-26 at 14 49 57" src="https://github.com/user-attachments/assets/b266ded8-71d5-4704-9473-fcdc6810004c" />
