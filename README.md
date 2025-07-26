@@ -2,7 +2,7 @@
 This project aims to simulate a realistic end-to-end user journey: from landing on the Beequip staging website, navigating through the marketplace, and validating lease information of filtered inventory listings. The automation approach follows modular design using Page Object Models (POM), data fixtures, and robust test selectors with Playwright. 
 However, test navigates directly to the “subcategorie:schuifzeilen” listing page to ensure filters to skip page direction issue.
 
-##E2E test - covered flow;
+## E2E test - covered flow;
 - Visit the staging environment of Beequip → https://staging.beequip.com/
   - The site is protected by Basic Authentication; credentials are defined in fixtures/login.json and used automatically in the test runner (tests/launchBeequip.spec.js)
 - Navigate to the Marketplace
@@ -13,7 +13,7 @@ However, test navigates directly to the “subcategorie:schuifzeilen” listing 
 - Navigate into the ad for the matched vehicle
 - Validate that a monthly lease rate is displayed for that vehicle
 
-##E2E test - Not Covered (Due to staging environment redirect issues)
+## E2E test - Not Covered (Due to staging environment redirect issues)
 
 Unfortunately, the automated test couldn’t proceed further with the lease simulator workflow, due to a redirect issue in the staging environment that behaves differently than production. Therefore, the following steps are currently not automated:
 <img width="2862" height="1504" alt="Screenshot 2025-07-26 at 14 55 46" src="https://github.com/user-attachments/assets/937d7d1a-f7ec-413e-8dac-4234b5bacd7a" />
