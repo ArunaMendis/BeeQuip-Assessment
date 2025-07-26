@@ -18,7 +18,7 @@ However, test navigates directly to the “subcategorie:schuifzeilen” listing 
 Unfortunately, the automated test couldn’t proceed further with the lease simulator workflow, due to a redirect issue in the staging environment that behaves differently than production. Therefore, the following steps are currently not automated:
 <img width="2862" height="1504" alt="Screenshot 2025-07-26 at 14 55 46" src="https://github.com/user-attachments/assets/937d7d1a-f7ec-413e-8dac-4234b5bacd7a" />
 
-Therefore, not convered section;
+Therefore, thing not covered;
   - Calculate a monthly price using the lease calculator
     - Search for Beequip as the company (_KVK-nummer:_ 63204258)
     - Use the `@example.com` or `@mailinator.com` domein
